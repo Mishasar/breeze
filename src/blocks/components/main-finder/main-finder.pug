@@ -1,0 +1,31 @@
+form.main-finder
+    label.main-finder__part.main-finder__part_that.main-finder__part_left
+        img(src='img/main-finder/navigation.svg').main-finder__img
+        span Что
+        input.main-finder__input(placeholder='Место, объект отдыха...')
+    .main-finder__part.main-finder__part_when.main-finder__part_including.js-datepicker-wrap
+        img(src='img/main-finder/calendar.svg').main-finder__img
+        span Когда
+        input.main-finder__input#js-datepicker-start(placeholder='с 29.07 по 31.07')
+        .main-finder__hidden
+            #js-datapicker-inline
+    .main-finder__part.main-finder__part_who.main-finder__part_including.js-childs
+        img(src='img/main-finder/users.svg').main-finder__img
+        span Кто
+        .main-finder__people-count
+            .js-changed(data-link='parents') 2 взрослых
+            .main-finder__delimeter ·
+            .js-changed(data-link='child') 1 ребенок
+        .main-finder__hidden
+            .main-finder__input-wrap.js-input-wrap
+                span.main-finder__input-heading.no-pad Взрослые
+                input.main-finder__input.main-finder__input_light.js-input(value='1' type='number' data-change='parents')
+                a.main-finder__button.main-finder__button_add.js-input-add
+                a.main-finder__button.main-finder__button_remove.js-input-remove
+            .main-finder__input-wrap.js-input-wrap(data-link='parents')
+                span.main-finder__input-heading.no-pad Дети
+                input.main-finder__input.main-finder__input_light.js-input(value='1' type='number' data-change='child')
+                a.main-finder__button.main-finder__button_add.js-input-add
+                a.main-finder__button.main-finder__button_remove.js-input-remove
+
+    a(href="#").main-finder__btn

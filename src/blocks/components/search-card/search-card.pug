@@ -1,0 +1,17 @@
+include ../../components/tag/tag
+
+mixin searchCardMixin(cardInfo)
+    a(href='#').s-card
+        .s-card__img-wrap
+            img(src=cardInfo.img).s-card__img
+        .s-card__body
+            span.s-card__title=cardInfo.title
+            .s-card__subtitle-wrap
+                span.s-card__subtitle=cardInfo.subtitle
+                span.s-card__cost <strong>от 600</strong> ₽/чел.
+        .s-card__tags
+            +tagsMixin(cardInfo.tags)
+
+mixin searchCardsMixin(cardsList)
+    for card in cardsList
+        +searchCardMixin(card)

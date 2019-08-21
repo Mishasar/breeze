@@ -1,0 +1,13 @@
+extends ../views/layouts/default
+
+block variables
+    - var title = "Поиск";
+
+    //- Данные для миксинов Pug
+    include ../data/main
+
+block content
+    include ../blocks/components/filter/filter
+    .page__inner
+        include ../blocks/modules/search-cards/search-cards
+        include ../blocks/components/map/map

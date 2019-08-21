@@ -1,0 +1,30 @@
+.paginator {
+  display: flex;
+  justify-content: center;
+  margin-top: 34px;
+  margin-bottom: 20px;
+
+  &__arrow {
+    background: url("../../../img/paginator/paginator-arrow.svg") no-repeat center center;
+    height: 31px;
+    width: 31px;
+    text-decoration: none;
+    margin: 0 16px;
+
+    &_next {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__number {
+    color: #D2D6DC;
+    font-size: 24px;
+    line-height: 31px;
+    text-decoration: none;
+    margin: 0 16px;
+
+    &_active {
+      color: #E26D5C;
+    }
+  }
+}

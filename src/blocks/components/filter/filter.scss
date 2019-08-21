@@ -1,0 +1,163 @@
+.filter {
+  background: #3066BE;
+  padding: 20px 52px;
+
+  &__inner {
+    display: flex;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    background: #FFFFFF;
+    border: 1px solid #D2D6DC;
+    box-sizing: border-box;
+    border-radius: 3px;
+    height: 33px;
+    padding: 6px 16px;
+    position: relative;
+    white-space: nowrap;
+
+    @include tablet {
+      margin: 0 0 8px 0;
+      width: 200px;
+    }
+
+    & + & {
+      margin-left: 8px;
+
+      @include tablet {
+        margin: 0 0 8px 0;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+      z-index: 2;
+      border: 1px solid #fff;
+
+      .filter__item-title {
+        z-index: 4;
+      }
+
+      &:after {
+        position: absolute;
+        left: 1px;
+        bottom: 0;
+        height: 15px;
+        width: calc(100% - 1px);
+        background: #fff;
+        content: "";
+        z-index: 3;
+      }
+
+      .filter__item-hidden {
+        display: block;
+      }
+    }
+  }
+
+  &__item-title {
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #1D3252;
+    position: relative;
+  }
+
+  &__item-hidden {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    padding: 16px;
+    background: #fff;
+    display: none;
+    position: absolute;
+    left: -1px;
+    top: calc(100% - 4px);
+    min-width: 100%;
+    z-index: 1;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+
+  input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+  }
+
+  &__reset-button {
+    border-radius: 3px;
+    border: 2px solid #E26D5C;
+    background-color: #fff;
+    background-image: url("../../../img/clear.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+  }
+
+  &__submit-button {
+    height: 32px;
+    margin-left: 16px;
+  }
+
+  &__result-buttons {
+    display: flex;
+    padding-top: 8px;
+  }
+
+  &__input-cost {
+    display: block;
+    background: #FFFFFF;
+    border: 1px solid #D2D6DC;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 16px;
+    width: 90px;
+    font-size: 20px;
+    line-height: 26px;
+    color: #1D3252;
+    font-weight: 300;
+  }
+
+  &__slider-range {
+    margin: 24px 0 20px;
+  }
+
+  &__row {
+    display: flex;
+
+    &_tags {
+      flex-wrap: wrap;
+      width: 450px;
+
+      @include tablet {
+        width: auto;
+      }
+
+      .checkbox + label{
+        margin: 4px 4px;
+        width: calc(100% / 3 - 8px);
+
+        @include tablet {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  &__cell {
+    & + & {
+      padding-left: 16px;
+    }
+  }
+
+}

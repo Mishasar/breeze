@@ -1,0 +1,18 @@
+mixin header(isMain)
+    header.header
+        .header__inner
+            if isMain
+                img(src='img/header/header-logo.svg').header__logo
+                span.header__slogan Быстрый поиск лучших мест отдыха
+            else
+                img(src='img/header/logo.svg').header__logo.header__logo_small
+                form.header__finder
+                    input(placeholder="Место, объект отдыха...")
+                    button
+            a(href='#').header__link Все объекты
+            a(href='#').header__link На карте
+            a(href='#').header__hamburger.js-hamburger
+    .fullscreen-menu.js-fullscreen-menu
+        a.fullscreen-menu__item.fullscreen-menu__item_active(href='#') Блог
+        a.fullscreen-menu__item(href='#') Правила
+        a.fullscreen-menu__item(href='#') Поддержка

@@ -1,0 +1,50 @@
+.detail-slider {
+  &__slide-wrap {
+    padding-left: 20px;
+    max-width: 800px;
+  }
+
+  &_preview {
+    padding: 20px 0 40px;
+
+    &__slide-wrap {
+      max-width: 180px;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    width: 134px;
+    height: 56px;
+    background: #fff;
+    display: block;
+    top: calc(50% - 28px);
+    left: 0;
+    z-index: 1;
+
+    @include phone {
+      width: 72px;
+    }
+
+    &:after {
+      background: url('../../img/arrow-left.svg') no-repeat center center;
+      width: 32px;
+      height: 32px;
+      right: 16px;
+      top: 12px;
+      content: "";
+      display: block;
+      position: absolute;
+    }
+
+    &_next {
+      left: unset;
+      right: 0;
+
+      &:after {
+        left: 16px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

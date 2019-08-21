@@ -1,0 +1,66 @@
+.mailing {
+  background: #3066BE url('../../img/email.svg') no-repeat center center;
+  height: 322px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 64px;
+
+  &__title {
+    font-size: 48px;
+    line-height: 62px;
+    color: #FFFFFF;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    padding: 45px 0 24px;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__input {
+    background: #FFFFFF;
+    border: 1px solid #D2D6DC;
+    box-sizing: border-box;
+    border-radius: 8px;
+    height: 56px;
+    width: 457px;
+    padding: 15px;
+    font-size: 20px;
+    line-height: 26px;
+
+    @include tablet {
+      padding: 8px;
+    }
+  }
+
+  &__button {
+    height: 56px;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 19px 34px;
+    margin-left: 24px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #E26D5C;
+    border-radius: 3px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+  }
+}

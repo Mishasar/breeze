@@ -1,0 +1,11 @@
+extends ../views/layouts/main
+
+block variables
+    - var title = "Главная";
+
+    //- Данные для миксинов Pug
+    include ../data/main
+
+block content
+    include ../blocks/modules/welcome/welcome
+    include ../blocks/modules/main-cards/main-cards

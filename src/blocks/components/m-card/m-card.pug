@@ -1,0 +1,13 @@
+mixin mainCard(cardsInfo)
+    a(href='#').m-card(class=(cardsInfo.size === 2) ? "m-card_size_xl": "")
+        .m-card__img-wrap
+            img(src=cardsInfo.img).m-card__img
+        .m-card__body
+            span.m-card__title=cardsInfo.title
+            span.m-card__subtitle=cardsInfo.subtitle
+
+
+
+mixin mainCards(cardsList)
+    for card in cardsList
+        +mainCard(card)

@@ -1,0 +1,6 @@
+mixin tagMixin(tagInfo)
+    span.tag(style="color:" + tagInfo.color + ";border-color:" + tagInfo.color)= tagInfo.text
+
+mixin tagsMixin(tagList)
+        for tag in tagList
+            +tagMixin(tag)

@@ -1,0 +1,37 @@
+mixin footer(isMain)
+    footer.footer
+        .container.footer__inner(class = (isMain) ? "footer__inner_main": "footer__inner_row")
+            if isMain
+                img.footer__logo(src="img/footer/footer-logo.svg")
+            else
+                img.footer__logo.footer__logo_nopad(src="img/header/logo.svg")
+            .footer__links.footer__links_text
+                a.footer__textlink(href="#")
+                    | Все объекты
+                a.footer__textlink(href="#")
+                    | На карте
+                a.footer__textlink(href="#")
+                    | Блог
+                a.footer__textlink(href="#")
+                    | Правила
+            span.footer__block(class = (isMain) ? "": "footer__block_default")
+                .footer__block-title Принимаем к оплате
+                .footer__links
+                    a.footer__imglink(href="#")
+                        img(src="img/footer/yandex.svg")
+                    a.footer__imglink(href="#")
+                        img(src="img/footer/visa.svg")
+                    a.footer__imglink(href="#")
+                        img(src="img/footer/mc.svg")
+            span.footer__block(class = (isMain) ? "" : "footer__block_default")
+                .footer__block-title Принимаем к оплате
+                .footer__links
+                    a.footer__imglink(href="#")
+                        img(src="img/footer/vk.svg")
+                    a.footer__imglink(href="#")
+                        img(src="img/footer/instagram.svg")
+                    a.footer__imglink(href="#")
+                        img(src="img/footer/ok.svg")
+            if isMain
+                p.footer__text Воздух Алтая — это сервис, который объединяет тех кто хочет отдохнуть и тех у кого есть места для отдыха. Если вы устали от городской суеты и не можете найти подходящее место для отдыха на Алтае, то мы поможем вам в этом. Сервис предлагает большое количество вариантов, с помощью удобного поиска вы обязательно подберете самый опимальный.
+

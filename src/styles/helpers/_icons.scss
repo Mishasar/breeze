@@ -1,0 +1,36 @@
+@mixin icon-pseudo() {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    @content;
+  }
+}
+.icon {
+  &-pseudo {
+    &-pdf {
+      &-white {
+        @include icon-pseudo {
+        background: url(icon-pdf-white()) no-repeat center;
+        width: 27px;
+        height: 32px;
+        }
+      }
+    }
+    &-ms-word {
+      &-white {
+        @include icon-pseudo {
+          background: url(icon-ms-word-white()) no-repeat center;
+          width: 33px;
+          height: 32px;
+        }
+      }
+    }
+  }
+}

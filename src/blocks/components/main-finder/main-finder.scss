@@ -1,0 +1,220 @@
+.main-finder {
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: flex;
+
+  @include tablet {
+    flex-wrap: wrap;
+  }
+
+  &__part {
+    background: #FFFFFF;
+    display: inline-block;
+    padding: 13px 15px 16px;
+    height: 72px;
+    box-sizing: border-box;
+    border-left: 1px solid #D2D6DC;
+    border-top: 1px solid #D2D6DC;
+    border-bottom: 1px solid #D2D6DC;
+    position: relative;
+
+    @include tablet {
+      width: 100%;
+      border-radius: 8px;
+      margin: 4px;
+    }
+
+    &_left {
+      border-bottom-left-radius: 8px;
+      border-top-left-radius: 8px;
+    }
+
+    &_including {
+      &:hover {
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+        z-index: 2;
+        border: 1px solid #fff;
+
+        &:after {
+          position: absolute;
+          left: 1px;
+          bottom: 0;
+          height: 15px;
+          width: calc(100% - 1px);
+          background: #fff;
+          content: "";
+          z-index: 3;
+        }
+
+        .main-finder__hidden {
+          display: block;
+        }
+      }
+    }
+
+
+    &_that {
+      width: 475px;
+
+      @include tablet {
+        width: 100%;
+        border-radius: 8px;
+      }
+    }
+
+    &_who {
+      width: 265px;
+
+      @include tablet {
+        width: calc(50% - 8px);
+        border-radius: 8px;
+      }
+
+      @include phone {
+        width: 100%;
+      }
+    }
+
+    &_when {
+      width: 165px;
+
+      @include tablet {
+        border-radius: 8px;
+        width: calc(50% - 8px);
+      }
+
+      @include phone {
+        width: 100%;
+      }
+    }
+
+    span {
+      font-size: 16px;
+      line-height: 21px;
+      color: #1D3252;
+      font-weight: bold;
+      padding-left: 4px;
+
+      &.no-pad {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__img {
+    height: 16px;
+    width: 16px;
+    top: 3px;
+    position: relative;
+  }
+
+  &__input {
+    margin-top: 4px;
+    display: block;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    line-height: 21px;
+
+    &_hidden {
+      display: none;
+    }
+
+    &_light {
+      border: none;
+    }
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+
+  input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+  }
+
+  &__people-count {
+    display: flex;
+    font-size: 16px;
+    line-height: 21px;
+    color: #8F99A9;
+    font-weight: 300;
+  }
+
+  &__delimeter {
+    padding: 0 6px 0 19px;
+  }
+
+
+  &__btn {
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    background: #E26D5C url('../../../img/main-finder/search.svg') no-repeat center center;
+
+    @include tablet {
+      border-radius: 8px;
+      margin: 4px;
+      width: 100%;
+    }
+  }
+
+  &__hidden {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    padding: 16px;
+    background: #fff;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: calc(100% - 3px);
+    min-width: 100%;
+    z-index: 1;
+  }
+
+  &__input-heading {
+    font-size: 16px;
+    line-height: 21px;
+    color: #1D3252;
+    font-weight: bold;
+  }
+
+  &__input-wrap {
+    display: inline-block;
+    width: 49%;
+    position: relative;
+    padding-right: 55px;
+    padding-bottom: 14px;
+  }
+
+  &__button {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    right: 8px;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+
+    &_add {
+      background: url('../../../img/add.svg') no-repeat center center;
+      top: 0;
+    }
+
+    &_remove {
+      background: url('../../../img/remove.svg') no-repeat center center;
+      top: 30px;
+    }
+  }
+}

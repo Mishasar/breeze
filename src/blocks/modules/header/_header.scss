@@ -1,0 +1,157 @@
+.header {
+  padding: 20px 50px;
+
+  @include tablet {
+    padding: 8px 16px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 321px;
+    height: 40px;
+    object-position: left;
+    object-fit: contain;
+
+    @include phone {
+      width: 250px;
+    }
+
+    &_small {
+      width: 200px;
+    }
+  }
+
+  &__slogan {
+    margin: auto;
+    font-size: 20px;
+    line-height: 26px;
+    color: #000000;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__finder {
+    background: #FFFFFF;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    height: 56px;
+    max-width: 591px;
+    width: 100%;
+    margin-left: 27px;
+
+    @include tablet {
+      display: none;
+    }
+
+      input {
+      width: calc(100% - 10px);
+      height: 100%;
+      padding: 15px;
+      font-size: 20px;
+      line-height: 26px;
+      border: 1px solid #D2D6DC;
+      border-right: none;
+      border-bottom-left-radius: 8px;
+      border-top-left-radius: 8px;
+    }
+
+    button {
+      width: 56px;
+      height: 56px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: none;
+      border-bottom-right-radius: 8px;
+      border-top-right-radius: 8px;
+      background: #E26D5C url('../../../img/main-finder/search.svg') no-repeat center center;
+
+      &:active {
+
+      }
+    }
+  }
+
+  &__link {
+    font-size: 20px;
+    line-height: 26px;
+    text-decoration: underline;
+    color: #1D3252;
+    margin-right: 40px;
+
+    &:first-of-type {
+      margin-left: auto;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__hamburger {
+    background-color: #E26D5C;
+    height: 48px;
+    width: 48px;
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    z-index: 4;
+
+    &:before {
+      width: 20px;
+      height: 3px;
+      background: #FFFFFF;
+      border-radius: 1px;
+      left: 14px;
+      top: 19px;
+      position: absolute;
+      content: "";
+      transition: width .3s ease-in-out, transform .3s ease;
+    }
+
+    &:after {
+      width: 20px;
+      height: 3px;
+      background: #FFFFFF;
+      border-radius: 1px;
+      left: 14px;
+      top: 26px;
+      position: absolute;
+      content: "";
+      transition: width .3s ease-in-out, transform .3s ease;
+    }
+
+    &:after {
+      width: 13px;
+    }
+
+    &:hover {
+      background-color: #CE5948;
+
+      &:after {
+        width: 20px;
+      }
+    }
+
+    &_closed {
+      &:before {
+        width: 20px;
+        transform: rotate(45deg) translateY(2px) translateX(2px);
+      }
+
+      &:after {
+        width: 20px;
+        transform: rotate(-45deg) translateY(-3px) translateX(3px);
+      }
+    }
+  }
+
+}

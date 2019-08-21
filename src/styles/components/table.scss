@@ -1,0 +1,24 @@
+.table {
+  padding-bottom: 56px;
+
+  &__row {
+    display: flex;
+    border-bottom: 1px solid #8F99A9;
+    padding: 23px 16px;
+  }
+
+  &__cell {
+    &_value {
+      font-size: 18px;
+      line-height: 23px;
+      color: #8F99A9;
+    }
+
+    &_name {
+      font-size: 18px;
+      line-height: 25px;
+      color: #1D3252;
+      flex: 0 0 30%;
+    }
+  }
+}

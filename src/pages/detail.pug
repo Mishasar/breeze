@@ -1,0 +1,275 @@
+extends ../views/layouts/default
+
+include ../blocks/modules/tags/tags
+
+block variables
+    - var title = "Поиск";
+
+    include ../data/main
+
+block content
+    .detail-slider.js-detail-slider
+        .detail-slider__slide-wrap
+            img.detail-slider__slide(src='img/slide.jpg')
+        .detail-slider__slide-wrap
+            img.detail-slider__slide(src='img/slide.jpg')
+        .detail-slider__slide-wrap
+            img.detail-slider__slide(src='img/slide.jpg')
+        .detail-slider__slide-wrap
+            img.detail-slider__slide(src='img/slide.jpg')
+        .detail-slider__slide-wrap
+            img.detail-slider__slide(src='img/slide.jpg')
+        .detail-slider__slide-wrap
+            img.detail-slider__slide(src='img/slide.jpg')
+        .detail-slider__slide-wrap
+            img.detail-slider__slide(src='img/slide.jpg')
+        .detail-slider__slide-wrap
+            img.detail-slider__slide(src='img/slide.jpg')
+
+    .container
+        .detail-slider_preview.js-preview-slider
+            .detail-slider__slide-wrap
+                img.detail-slider__slide(src='img/slide.jpg')
+            .detail-slider__slide-wrap
+                img.detail-slider__slide(src='img/slide.jpg')
+            .detail-slider__slide-wrap
+                img.detail-slider__slide(src='img/slide.jpg')
+            .detail-slider__slide-wrap
+                img.detail-slider__slide(src='img/slide.jpg')
+            .detail-slider__slide-wrap
+                img.detail-slider__slide(src='img/slide.jpg')
+            .detail-slider__slide-wrap
+                img.detail-slider__slide(src='img/slide.jpg')
+            .detail-slider__slide-wrap
+                img.detail-slider__slide(src='img/slide.jpg')
+            .detail-slider__slide-wrap
+                img.detail-slider__slide(src='img/slide.jpg')
+        .detail-page__nav
+            h1.detail-page__title Супер-основательная база всемирного наследия Дали ВиДали
+            .detail-page__card
+                span.detail-page__address 658654 Республика  Алтай, с.Элекмонар, ул.Главная, д.14
+                .detail-page__tags
+                    include ../blocks/modules/tags/tags
+        h2.detail-page__section-title Туристическая база
+        p.detail-page__section-text Круглогодичная база отдыха «Дали-ВиДали» расположена на берегу Белого озера в 5 км от подножия Синюхи. Сезонных мест размещения- 40-45, круглогодичных- 30. С базы открывается прекрасный вид на гору Синюха и Белое озеро. Возле каждого дома расположены удобные беседки ( есть казаны и мангалы). На территории базы есть 2 бани и место для палаточного городка. Возможно размещение с питанием. Круглогодичная база отдыха «Дали-ВиДали» расположена на берегу Белого озера в 5 км от подножия Синюхи. Сезонных мест размещения- 40-45, круглогодичных- 30. С базы открывается прекрасный вид на гору Синюха и Белое озеро. Возле каждого дома расположены удобные беседки ( есть казаны и мангалы). На территории базы есть 2 бани и место для палаточного городка. Возможно размещение с питанием. Круглогодичная база отдыха «Дали-ВиДали» расположена на берегу Белого озера в 5 км от подножия Синюхи. Сезонных мест размещения- 40-45, круглогодичных- 30. С базы открывается прекрасный вид на гору Синюха и Белое озеро. Возле каждого дома расположены удобные беседки ( есть казаны и мангалы). На территории базы есть 2 бани и место для палаточного городка. Возможно размещение с питанием.
+        h2.detail-page__section-title Удобства
+        .detail-page__comfort-tags
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Детская площадка
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Детская площадка
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Детская площадка
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Детская площадка
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+            span.detail-page__comfort <img src='img/wifi.svg'> Wi-Fi
+    .detail-page__colored-section
+        .container.detail-page__section
+            h2.detail-page__section-title Номера
+            include ../blocks/components/main-finder/room-finder
+            .room-card
+                .room-card__top
+                    img.room-card__img(src='img/slide.jpg')
+                    .room-card__row.room-card__row_little-info
+                        a.room-card__title(href='javascript:void(0)') Полулюкс с видом на озеро
+                        .room-card__value
+                            span.room-card__info <img src='img/user.svg'> 2 гостя
+                            span.room-card__info <img src='img/bed.svg'> 2 односпальные
+                    .room-card__row.room-card__row_tags
+                        .room-card__tag Душ
+                        .room-card__tag Отопление
+                        .room-card__tag Посуда
+                        .room-card__tag Посуда
+                        .room-card__tag Душ
+                        .room-card__tag Отопление
+                    .room-card__row.room-card__row_cost
+                        .room-card__cost от <strong>2500</strong>₽
+                        .room-card__price <strong>600</strong> ₽/чел.
+                    a.btn.room-card__btn(href="#") Забронировать
+            .room-card
+                .room-card__top
+                    img.room-card__img(src='img/slide.jpg')
+                    .room-card__row.room-card__row_little-info
+                        a.room-card__title(href='javascript:void(0)') Полулюкс с видом на озеро
+                        .room-card__value
+                            span.room-card__info <img src='img/user.svg'> 2 гостя
+                            span.room-card__info <img src='img/bed.svg'> 2 односпальные
+                    .room-card__row.room-card__row_tags
+                        .room-card__tag Душ
+                        .room-card__tag Отопление
+                        .room-card__tag Посуда
+                        .room-card__tag Посуда
+                        .room-card__tag Душ
+                        .room-card__tag Отопление
+                    .room-card__row.room-card__row_cost
+                        .room-card__cost от <strong>2500</strong>₽
+                        .room-card__price <strong>600</strong> ₽/чел.
+                    a.btn.room-card__btn(href="#") Забронировать
+                .room-card__bottom
+                    .room-card__row.room-card__row_top.room-card__row_nopad
+                        .room-card__cell.vertical-slider.js-slider-vertical
+                            .vertical-slider__slide
+                                .vertical-slider__slide-inner
+                                    img.detail-slider__slide(src='img/slide.jpg')
+                            .vertical-slider__slide
+                                .vertical-slider__slide-inner
+                                    img.detail-slider__slide(src='img/slide.jpg')
+                            .vertical-slider__slide
+                                .vertical-slider__slide-inner
+                                    img.detail-slider__slide(src='img/slide.jpg')
+                            .vertical-slider__slide
+                                .vertical-slider__slide-inner
+                                    img.detail-slider__slide(src='img/slide.jpg')
+                            .vertical-slider__slide
+                                .vertical-slider__slide-inner
+                                    img.detail-slider__slide(src='img/slide.jpg')
+                            .vertical-slider__slide
+                                .vertical-slider__slide-inner
+                                    img.detail-slider__slide(src='img/slide.jpg')
+                            .vertical-slider__slide
+                                .vertical-slider__slide-inner
+                                    img.detail-slider__slide(src='img/slide.jpg')
+                            .vertical-slider__slide
+                                .vertical-slider__slide-inner
+                                    img.detail-slider__slide(src='img/slide.jpg')
+                            .vertical-slider__slide
+                                .vertical-slider__slide-inner
+                                    img.detail-slider__slide(src='img/slide.jpg')
+                        .room-card__cell.room-card__cell_desc
+                            p Просторный номер с балконом, оформленный в загородном стиле. С балкона открывается вид на внутренний сад и двор, плац для занятий верховой ездой и живописный смешанный лес с рекой.
+                            h3 В номере
+                            ul
+                                li - 2 односпальные кровати или двуспальная кровать,
+                                li - платяной шкаф,
+                                li - прикроватные столики,
+                                li - плазменный телевизор "Samsung".
+                            h3 В ванной комнате
+                            ul
+                                li — Душевая кабина,
+                                li — Умывальник из натурального мрамора,
+                                li — Туалет,
+                                li — Зеркало,
+                                li — Туалетные принадлежности (полотенца, гель, мыло).
+                        .room-card__cell.room-card__row_tags-wrap
+                            p.h3 Все удобства
+                            .room-card__tag Душ
+                            .room-card__tag Отопление
+                            .room-card__tag Посуда
+                            .room-card__tag Посуда
+                            .room-card__tag Душ
+                            .room-card__tag Отопление
+
+
+            .room-card
+                .room-card__top
+                    img.room-card__img(src='img/slide.jpg')
+                    .room-card__row.room-card__row_little-info
+                        a.room-card__title(href='javascript:void(0)') Полулюкс с видом на озеро
+                        .room-card__value
+                            span.room-card__info <img src='img/user.svg'> 2 гостя
+                            span.room-card__info <img src='img/bed.svg'> 2 односпальные
+                    .room-card__row.room-card__row_tags
+                        .room-card__tag Душ
+                        .room-card__tag Отопление
+                        .room-card__tag Посуда
+                        .room-card__tag Посуда
+                        .room-card__tag Душ
+                        .room-card__tag Отопление
+                    .room-card__row.room-card__row_cost
+                        .room-card__cost от <strong>2500</strong>₽
+                        .room-card__price <strong>600</strong> ₽/чел.
+                    a.btn.room-card__btn(href="#") Забронировать
+            .room-card
+                .room-card__top
+                    img.room-card__img(src='img/slide.jpg')
+                    .room-card__row.room-card__row_little-info
+                        a.room-card__title(href='javascript:void(0)') Полулюкс с видом на озеро
+                        .room-card__value
+                            span.room-card__info <img src='img/user.svg'> 2 гостя
+                            span.room-card__info <img src='img/bed.svg'> 2 односпальные
+                    .room-card__row.room-card__row_tags
+                        .room-card__tag Душ
+                        .room-card__tag Отопление
+                        .room-card__tag Посуда
+                        .room-card__tag Посуда
+                        .room-card__tag Душ
+                        .room-card__tag Отопление
+                    .room-card__row.room-card__row_cost
+                        .room-card__cost от <strong>2500</strong>₽
+                        .room-card__price <strong>600</strong> ₽/чел.
+                    a.btn.room-card__btn(href="#") Забронировать
+            .room-card
+                .room-card__top
+                    img.room-card__img(src='img/slide.jpg')
+                    .room-card__row.room-card__row_little-info
+                        a.room-card__title(href='javascript:void(0)') Полулюкс с видом на озеро
+                        .room-card__value
+                            span.room-card__info <img src='img/user.svg'> 2 гостя
+                            span.room-card__info <img src='img/bed.svg'> 2 односпальные
+                    .room-card__row.room-card__row_tags
+                        .room-card__tag Душ
+                        .room-card__tag Отопление
+                        .room-card__tag Посуда
+                        .room-card__tag Посуда
+                        .room-card__tag Душ
+                        .room-card__tag Отопление
+                    .room-card__row.room-card__row_cost
+                        .room-card__cost от <strong>2500</strong>₽
+                        .room-card__price <strong>600</strong> ₽/чел.
+                    a.btn.room-card__btn(href="#") Забронировать
+            .room-card
+                .room-card__top
+                    img.room-card__img(src='img/slide.jpg')
+                    .room-card__row.room-card__row_little-info
+                        a.room-card__title(href='javascript:void(0)') Полулюкс с видом на озеро
+                        .room-card__value
+                            span.room-card__info <img src='img/user.svg'> 2 гостя
+                            span.room-card__info <img src='img/bed.svg'> 2 односпальные
+                    .room-card__row.room-card__row_tags
+                        .room-card__tag Душ
+                        .room-card__tag Отопление
+                        .room-card__tag Посуда
+                        .room-card__tag Посуда
+                        .room-card__tag Душ
+                        .room-card__tag Отопление
+                    .room-card__row.room-card__row_cost
+                        .room-card__cost от <strong>2500</strong>₽
+                        .room-card__price <strong>600</strong> ₽/чел.
+                    a.btn.room-card__btn(href="#") Забронировать
+    .container
+        h2.detail-page__section-title Детали
+        .table
+            .table__row
+                .table__cell.table__cell_name Заезд
+                .table__cell.table__cell_value 13:00
+            .table__row
+                .table__cell.table__cell_name Заезд
+                .table__cell.table__cell_value 13:00
+            .table__row
+                .table__cell.table__cell_name Условия
+                .table__cell.table__cell_value Дети до 7 лет бесплатно. Запрещено проживание с домашними животными По окончании периода проживания гость обязан освободить номер до расчетного часа (11:00 текущих суток), продление периода проживания производится только при отсутствии брони на данный номер. При наличии свободных номеров по необходимости гостю может быть предоставлен другой номер. При продлении проживания на неполные сутки взимается плата: за каждый час при выезде с 12:00 до 17:00, за полные сутки - при выезде после 17:00, при заезде до расчетного часа - плата за пол суток.
+            .table__row
+                .table__cell.table__cell_name Заезд
+                .table__cell.table__cell_value 13:00
+    .detail-page__map(style='background:url("img/map-big.jpg")')
+    .container.detail-page__banner
