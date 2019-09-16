@@ -8,6 +8,7 @@ import 'jquery-ui-slider/jquery-ui';
 datepickerFactory($);
 datepickerJAFactory($);
 
+
 $(document).ready(() => {
     $('.js-detail-slider').slick({
         slidesToShow: 3,
@@ -35,6 +36,8 @@ $(document).ready(() => {
         dots: false,
         focusOnSelect: true,
         infinite: true,
+        centerMode: true,
+        centerPadding: '0',
         responsive: [
             {
                 breakpoint: 768,
@@ -59,11 +62,31 @@ $(document).ready(() => {
             {
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 5,
                     vertical: false,
-
                 }
             },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    vertical: false,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    vertical: false,
+                }
+            },
+            {
+                breakpoint: 380,
+                settings: {
+                    slidesToShow: 1,
+                    vertical: false,
+                }
+            }
         ]
     });
 
@@ -74,10 +97,36 @@ $(document).ready(() => {
         $('.js-fullscreen-menu').toggleClass('fullscreen-menu_open');
     });
 
-    $('#js-datapicker-inline').datepicker({
+    $("#js-datapicker-inline").datepicker({
         altField: '#js-datepicker',
-        prevText: '<',
-        nextText: '>',
+        prevText: '',
+        nextText: '',
+        minDate: 0,
+        numberOfMonths: [1, 1],
+        beforeShowDay: function (date) {
+            var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#dateStart").val());
+            var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#dateEnd").val());
+            return [true, date1 && ((date.getTime() == date1.getTime()) || (date2 && date >= date1 && date <= date2)) ? "dp-highlight" : ""];
+        },
+        onSelect: function (dateText, inst) {
+            var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#dateStart").val());
+            var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#dateEnd").val());
+            var selectedDate = $.datepicker.parseDate($.datepicker._defaults.dateFormat, dateText);
+
+
+            if (!date1 || date2) {
+                $("#dateStart").val(dateText);
+                $("#dateEnd").val("");
+                $(this).datepicker();
+            } else if (selectedDate < date1) {
+                $("#dateEnd").val($("#dateStart").val());
+                $("#dateStart").val(dateText);
+                $(this).datepicker();
+            } else {
+                $("#dateEnd").val(dateText);
+                $(this).datepicker();
+            }
+        }
     });
 
     $('.js-datepicker-wrap').hover(
@@ -126,8 +175,6 @@ $(document).ready(() => {
         } else {
             const changedBlock = $('.js-childs .js-changed[data-link="child"]');
 
-            console.log(changedBlock);
-
             switch (parseInt(value)) {
             case 0:
                 changedBlock.text('Нет детей');
@@ -161,6 +208,41 @@ $(document).ready(() => {
             $('.js-cost-min').val(ui.values[0]);
             $('.js-cost-max').val(ui.values[1]);
         }
+    });
+
+    if ($('.js-scene-wrap').length > 0) {
+        let elem = $('.js-scene-wrap'),
+            pos = elem.offset(),
+            elemLeft = pos.left,
+            elemTop = pos.top,
+            elemWidth = elem.width(),
+            elemHeight = elem.height(),
+            xCenter,
+            yCenter;
+
+        elem.mousemove(function (e) {
+            if ($(document).outerWidth() > 768) {
+                xCenter = (elemWidth / 2) - (e.pageX - elemLeft);
+                yCenter = (elemHeight / 2) - (e.pageY - elemTop);
+
+                $('.js-scene').each(function () {
+                    let speed = $(this).attr('data-speed'),
+                        xPos = Math.round(-1 * xCenter / 30 * speed),
+                        yPos = Math.round(yCenter / 50 * speed);
+
+                    if (yPos < 0)
+                        yPos = -2 * speed;
+
+                    $(this).css('transform', 'translate3d(' + xPos + 'px, ' + yPos + 'px, 0px)');
+                });
+            }
+        });
+    }
+
+    $('.js-room-card-toggle').on('click', (e)=>{
+        const $el = $(e.target);
+        $(".js-slider-vertical").slick("refresh");
+        $el.closest('.js-room-card').find('.js-room-card-bottom').toggleClass('active');
     });
 
 

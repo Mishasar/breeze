@@ -1,6 +1,10 @@
 .vertical-slider {
   width: 180px;
 
+  @include tablet {
+    width: 100%;
+  }
+
   &__slide-inner {
     height: 106px;
     width: 180px;
@@ -10,6 +14,54 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    background: #fff;
+    display: block;
+    top: 0;
+    z-index: 1;
+    transform: rotate(90deg);
+    left: calc(50% - 28px);
+
+    @media (max-width: 1200px) {
+      transform: none;
+      top: calc(50% - 28px);
+      left: 0;
+    }
+
+    @include phone {
+      width: 72px;
+    }
+
+    &:after {
+      background: url('../../img/arrow-left.svg') no-repeat center center;
+      width: 32px;
+      height: 32px;
+      right: 16px;
+      top: 12px;
+      content: "";
+      display: block;
+      position: absolute;
+    }
+
+    &_next {
+      top: unset;
+      bottom: 0;
+
+      @media (max-width: 1200px) {
+        right: 0;
+        left: unset;
+      }
+
+      &:after {
+        left: 16px;
+        transform: rotate(180deg);
+      }
     }
   }
 }

@@ -4,6 +4,11 @@
     justify-content: flex-end;
     padding-top: 16px;
 
+    @include phone {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
     .tag {
       margin-left: 8px;
     }
@@ -21,7 +26,8 @@
   &__card {
     background: #F0F4FA;
     border-radius: 3px;
-    max-width: 482px;
+    width: 482px;
+    max-width: 100%;
     padding: 16px 24px;
   }
 

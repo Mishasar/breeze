@@ -2,10 +2,10 @@ mixin footer(isMain)
     footer.footer
         .container.footer__inner(class = (isMain) ? "footer__inner_main": "footer__inner_row")
             if isMain
-                img.footer__logo(src="img/footer/footer-logo.svg")
+                a.footer__logo(href="#" style="background-image:url('img/footer/footer-logo.svg')")
             else
-                img.footer__logo.footer__logo_nopad(src="img/header/logo.svg")
-            .footer__links.footer__links_text
+                a.footer__logo.footer__logo_nopad(href="#" style="background-image:url('img/header/logo.svg')")
+            .footer__links.footer__links_text(class = (isMain) ? "footer__links_main": "")
                 a.footer__textlink(href="#")
                     | Все объекты
                 a.footer__textlink(href="#")
@@ -16,7 +16,7 @@ mixin footer(isMain)
                     | Правила
             span.footer__block(class = (isMain) ? "": "footer__block_default")
                 .footer__block-title Принимаем к оплате
-                .footer__links
+                .footer__links.footer__links_img
                     a.footer__imglink(href="#")
                         img(src="img/footer/yandex.svg")
                     a.footer__imglink(href="#")
@@ -25,7 +25,7 @@ mixin footer(isMain)
                         img(src="img/footer/mc.svg")
             span.footer__block(class = (isMain) ? "" : "footer__block_default")
                 .footer__block-title Принимаем к оплате
-                .footer__links
+                .footer__links.footer__links_img
                     a.footer__imglink(href="#")
                         img(src="img/footer/vk.svg")
                     a.footer__imglink(href="#")

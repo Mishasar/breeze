@@ -78,14 +78,21 @@
   }
 
   &__links {
-    &_text {
+    &_main {
       margin-bottom: 32px;
+    }
+
+    &_text {
       @include phone {
         padding: 16px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
       }
+    }
+
+    &_img {
+      display: flex;
     }
 
     &_defaults {
@@ -95,10 +102,19 @@
 
   &__logo {
     margin-bottom: 32px;
+    max-width: 452px;
+    height: 130px;
+    display: block;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 
     &_nopad {
       margin-bottom: 0;
       margin-right: 30px;
+      width: 179px;
+      height: 36px;
     }
   }
 }

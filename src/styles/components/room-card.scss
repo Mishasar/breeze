@@ -87,7 +87,7 @@
       color: #8F99A9;
 
       strong {
-        font-weight: 500;
+        font-weight: bold;
         color: #1D3252;
       }
     }
@@ -127,7 +127,7 @@
 
     strong {
       color: #1D3252;
-      font-weight: 500;
+      font-weight: bold;
     }
   }
 
@@ -141,7 +141,7 @@
 
     strong {
       color: #1D3252;
-      font-weight: 500;
+      font-weight: bold;
     }
   }
 
@@ -155,6 +155,17 @@
     }
   }
 
+  &__bottom {
+    max-height: 0;
+    transition: max-height .5s ease-in-out;
+    overflow: hidden;
+    height: auto;
+
+    &.active {
+      max-height: 500px;
+    }
+  }
+
   &__title {
     font-size: 20px;
     line-height: 26px;
@@ -165,6 +176,7 @@
     border-bottom: 1px dashed #8F99A9;
     position: relative;
     padding-right: 20px;
+    font-weight: bold;
 
     &:after {
       position: absolute;

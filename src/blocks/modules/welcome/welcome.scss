@@ -6,11 +6,12 @@
   }
 
   &__inner {
-    background: #3066BE url("../../../img/welcome/welcome-bg.svg") no-repeat bottom;
+    background: #3066BE;
     height: 965px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     @include tablet {
       padding: 128px 16px 16px;
@@ -34,6 +35,33 @@
     &_sliders {
       background-image: url("../../../img/welcome/sliders.svg");
     }
+  }
+
+  &__btn-wrap {
+    position: relative;
+    z-index: 5;
+  }
+
+  &__scene {
+    position: absolute;
+    z-index: 1;
+    width: 130%;
+    left: -15%;
+    bottom: -10%;
+    height: 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    transition: transform .1s ease;
+  }
+
+  &__scene-wrap {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
   }
 
 

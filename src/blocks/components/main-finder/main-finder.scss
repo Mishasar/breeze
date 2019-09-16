@@ -2,6 +2,8 @@
   box-sizing: border-box;
   border-radius: 8px;
   display: flex;
+  position: relative;
+  z-index: 5;
 
   @include tablet {
     flex-wrap: wrap;
@@ -122,6 +124,31 @@
 
     &_light {
       border: none;
+    }
+
+    &_date {
+      display: flex;
+
+      input {
+        display: block;
+        border: none;
+        font-size: 16px;
+        line-height: 21px;
+        padding-left: 5px;
+        width: 45px;
+      }
+
+      span {
+        font-size: 16px;
+        line-height: 21px;
+        color: #8F99A9;
+        margin: 0;
+        font-weight: 200;
+
+        input + & {
+          padding-left: 8px;
+        }
+      }
     }
   }
 

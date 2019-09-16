@@ -2,7 +2,7 @@ mixin header(isMain)
     header.header
         .header__inner
             if isMain
-                img(src='img/header/header-logo.svg').header__logo
+                a.header__logo(href="#" style="background-image:url('img/header/header-logo.svg')")
                 span.header__slogan Быстрый поиск лучших мест отдыха
             else
                 img(src='img/header/logo.svg').header__logo.header__logo_small
