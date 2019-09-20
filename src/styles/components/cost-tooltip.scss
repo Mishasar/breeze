@@ -1,0 +1,67 @@
+.s-card__cost:hover,
+.cost-tooltip:hover {
+  .cost-tooltip {
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 10;
+    max-height: 300px;
+    transition: opacity .3s ease, transform .3s ease, max-height .1s ease 0s;
+  }
+}
+
+
+.cost-tooltip {
+  max-height: 0;
+  color: #8F99A9;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  position: absolute;
+  bottom: calc(100% + 11px);
+  right: 0;
+  padding: 8px 16px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .3s ease, transform .3s ease, max-height .1s ease .3s;
+
+  &:after {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-top: 11px solid #FFFFFF;
+    border-bottom-left-radius: 3px;
+    bottom: -11px;
+    right: 20px;
+    content: "";
+  }
+
+
+  &__row {
+    display: block;
+    white-space: nowrap;
+
+    & + & {
+      margin-top: 4px;
+    }
+
+    &_aligh-right {
+      text-align: right;
+    }
+
+    &_aligh-center {
+      text-align: center;
+    }
+  }
+
+  &__span {
+    &_red {
+      color: #E26D5C;
+    }
+
+    &_gray {
+      color: #8F99A9;
+    }
+  }
+}

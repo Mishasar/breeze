@@ -63,6 +63,13 @@
     margin-left: auto;
     color: #8F99A9;
     font-weight: 300;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dashed #8F99A9;
+
+    &:hover {
+      border-bottom: 1px solid #8F99A9;
+    }
 
     strong {
       color: #1D3252;

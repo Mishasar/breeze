@@ -17,6 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  overflow: hidden;
 }
 
 .main-content {
@@ -235,6 +236,11 @@ h6,
   text-align: center;
   color: #FFFFFF;
   padding: 8px 18px;
+  transition: background-color .3s ease;
+
+  &:hover {
+    background: #b45a4c;
+  }
 }
 
 .checkbox {

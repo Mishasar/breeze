@@ -9,6 +9,12 @@ mixin searchCardMixin(cardInfo)
             .s-card__subtitle-wrap
                 span.s-card__subtitle=cardInfo.subtitle
                 span.s-card__cost <strong>от 600</strong> ₽/чел.
+                    .cost-tooltip
+                        .cost-tooltip__row
+                            span.cost-tooltip_span от 1200
+                            span.cost-tooltip_span.cost-tooltip__span_gray ₽/номер
+                        .cost-tooltip__row.cost-tooltip__row_aligh-right
+                            span.cost-tooltip_span.cost-tooltip__span_red Номер
         .s-card__tags
             +tagsMixin(cardInfo.tags)
 

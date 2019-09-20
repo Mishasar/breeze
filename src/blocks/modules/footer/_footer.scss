@@ -43,6 +43,22 @@
         margin-left: 0;
       }
     }
+
+    &_active {
+      color: #D2D6DC;
+    }
+
+    &_lang {
+      & + & {
+        margin-left: 3px;
+
+        &:before {
+          margin-right: 3px;
+          content: '/';
+          color: #D2D6DC;
+        }
+      }
+    }
   }
 
   &__imglink {
@@ -78,6 +94,8 @@
   }
 
   &__links {
+    margin: auto;
+
     &_main {
       margin-bottom: 32px;
     }

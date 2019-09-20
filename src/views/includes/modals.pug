@@ -1,0 +1,44 @@
+.modal.js-modal.js-modal-little
+    form.modal__inner.modal__inner_small
+        .button.modal__close(data-izimodal-close="")
+        h3.modal__title Забронировать
+        p.modal__subtitle Номер <b>Полулюкс с видом на озеро</b> в <b>Дали-Видали</b> с <b>2.07 по 4.07</b> на сумму <b>2750 руб</b>
+        .modal__inputs-wrap
+            label.modal__input
+                span.modal__input-name Имя
+                input(placeholder="Ваше имя")
+            label.modal__input
+                span.modal__input-name Телефон
+                input(placeholder="+7 (___) ___ __ __")
+            label.modal__input
+                span.modal__input-name E-mail
+                input(placeholder="example@gmail.com")
+        .modal__button-wrap
+            a.btn Отправить заявку
+
+.modal.js-modal.js-modal-big
+    form.modal__inner.modal__inner_big
+        .button.modal__close(data-izimodal-close="")
+        h3.modal__title Забронировать
+        .modal__inputs-wrap
+            label.modal__input.modal__input_size_half
+                span.modal__input-name Имя
+                input(placeholder="Ваше имя")
+            label.modal__input.modal__input_size_half
+                span.modal__input-name Телефон
+                input(placeholder="+7 (___) ___ __ __")
+            label.modal__input.modal__input_size_half
+                span.modal__input-name E-mail
+                input(placeholder="example@gmail.com")
+            label.modal__input.modal__input_size_half
+                span.modal__input-name Селект
+                select.js-select
+                    option пункт 1
+                    option пункт 2
+                    option пункт 3
+                    option пункт 4
+            label.modal__input
+                span.modal__input-name Сообщение
+                textarea(placeholder="Пишите текст тут....")
+        .modal__button-wrap
+            a.btn Отправить заявку

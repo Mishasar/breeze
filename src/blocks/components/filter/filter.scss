@@ -2,6 +2,10 @@
   background: #3066BE;
   padding: 20px 52px;
 
+  @include desktop {
+    height: 72px;
+  }
+
   &__inner {
     display: flex;
 
@@ -38,6 +42,10 @@
       box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
       z-index: 2;
       border: 1px solid #fff;
+
+      @include desktop {
+        height: 57px;
+      }
 
       .filter__item-title {
         z-index: 4;
@@ -129,7 +137,7 @@
   }
 
   &__slider-range {
-    margin: 24px 0 20px;
+    margin: 24px 2px 40px 10px;
   }
 
   &__row {
@@ -143,7 +151,7 @@
         width: auto;
       }
 
-      .checkbox + label{
+      .checkbox + label {
         margin: 4px 4px;
         width: calc(100% / 3 - 8px);
 
@@ -160,4 +168,116 @@
     }
   }
 
+}
+
+.ui-slider-handle {
+  display: flex;
+  justify-content: center;
+
+
+  span {
+    position: relative;
+    display: block;
+    top: 14px;
+    font-size: 16px;
+    line-height: 21px;
+    color: #E26D5C;
+    font-weight: 100;
+    background: #fff;
+    box-shadow: 0 0 5px #fff;
+    padding: 2px;
+    border-radius: 3px;
+    height: 20px;
+  }
+
+  span.right {
+    left: unset;
+  }
+
+}
+
+.ui-state-focus {
+  z-index: 5;
+}
+
+.filter__slider-range.ui-widget.ui-widget-content {
+  border: 1px solid #D2D6DC;
+}
+
+.filter__slider-range .ui-slider-range.ui-corner-all.ui-widget-header {
+  border: 1px solid #E26D5C;
+  height: 2px;
+}
+
+.tgl {
+  display: none;
+
+  &,
+  &:after,
+  &:before,
+  & *,
+  & *:after,
+  & *:before,
+  & + .tgl-btn {
+    box-sizing: border-box;
+
+    &::selection {
+      background: none;
+    }
+  }
+
+  + .tgl-btn {
+    outline: 0;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+.tgl {
+  + .tgl-btn {
+    margin: 16px 0;
+    padding-left: 83px;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      background: #8F99A9;
+      border-radius: 32px;
+      transition: all .4s ease;
+      border: none;
+      height: 40px;
+      width: 78px;
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      left: 5px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #fbfbfb;
+      transition: left .3s cubic-bezier(0.175, 0.885, 0.320, 1.275),
+      padding .3s ease, margin .3s ease;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, .1),
+      0 4px 0 rgba(0, 0, 0, .08);
+    }
+
+    &:hover:after {
+      will-change: padding;
+    }
+  }
+
+  &:checked + .tgl-btn:before {
+    background: #E26D5C;
+  }
+
+  &:checked + .tgl-btn:after {
+    left: 41px;
+  }
 }

@@ -124,6 +124,7 @@
 
     &_light {
       border: none;
+      margin-top: 10px;
     }
 
     &_date {
@@ -201,7 +202,11 @@
     left: 0;
     top: calc(100% - 3px);
     min-width: 100%;
-    z-index: 1;
+    z-index: 6;
+
+    @include phone {
+      max-width: 100%;
+    }
   }
 
   &__input-heading {
@@ -244,4 +249,18 @@
       top: 30px;
     }
   }
+
+  &__input-check {
+    display: flex;
+    align-items: center;
+    padding-bottom: 12px;
+
+    span {
+      margin-left: 12px;
+    }
+  }
+}
+
+.ui-datepicker-inline.ui-datepicker {
+  max-width: 100%;
 }

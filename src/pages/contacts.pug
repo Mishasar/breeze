@@ -1,0 +1,41 @@
+extends ../views/layouts/default
+
+include ../blocks/modules/tags/tags
+
+block variables
+    - var title = "Поиск";
+
+    include ../data/main
+
+block content
+    .container
+        h1.blog-title Связаться с нами вы можете любым удобным способом
+        .contacts
+            .contacts__item
+                p.contacts__item-title Онлайн чат со специалистом
+                .contacts__button-wrap
+                    a(href="#").btn.contacts__btn.contacts__btn_text Начать чат
+            .contacts__item
+                p.contacts__item-title В социальных сетях
+                .contacts__button-wrap
+                    a(href="#").btn.contacts__btn.contacts__btn_image(style="background-image:url('../img/c-vk.svg')")
+                    a(href="#").btn.contacts__btn.contacts__btn_image(style="background-image:url('../img/c-insta.svg')")
+                    a(href="#").btn.contacts__btn.contacts__btn_image(style="background-image:url('../img/c-ok.svg')")
+            .contacts__item
+                p.contacts__item-title Через мессенджеры
+                .contacts__button-wrap
+                    a(href="#").btn.contacts__btn.contacts__btn_image(style="background-image:url('../img/c-whatsapp.svg')")
+                    a(href="#").btn.contacts__btn.contacts__btn_image(style="background-image:url('../img/c-tg.svg')")
+            .contacts__item
+                p.contacts__item-title По электронной почте
+                .contacts__button-wrap
+                    a(href="#").btn.contacts__btn.contacts__btn_text Начать чат
+            .contacts__item
+                p.contacts__item-title Форма обратной связи
+                .contacts__button-wrap
+                    a(href="#").btn.contacts__btn.contacts__btn_text Написать
+            .contacts__item
+                p.contacts__item-title Позвонить
+                .contacts__button-wrap
+                    a(href="#").btn.contacts__btn.contacts__btn_text +7 923 000 77 11
+

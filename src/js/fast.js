@@ -3,6 +3,10 @@ import 'slick-carousel';
 import datepickerFactory from 'jquery-datepicker';
 import datepickerJAFactory from 'jquery-datepicker/i18n/jquery.ui.datepicker-ru';
 import 'jquery-ui-slider/jquery-ui';
+import 'select2';
+import iziModal from 'izimodal/js/iziModal';
+// Initialise imported function as jQuery function
+$.fn.iziModal = iziModal;
 
 // Just pass your jquery instance and you're done
 datepickerFactory($);
@@ -198,6 +202,8 @@ $(document).ready(() => {
 
     });
 
+    const minHandle = $(".js-cost-min-handle span");
+    const maxHandle = $(".js-cost-max-handle span");
 
     $(".js-slider-range-cost").slider({
         range: true,
@@ -205,6 +211,8 @@ $(document).ready(() => {
         min: 1,
         max: 10000,
         slide: function (event, ui) {
+            minHandle.text(ui.values[0]);
+            maxHandle.text(ui.values[1]);
             $('.js-cost-min').val(ui.values[0]);
             $('.js-cost-max').val(ui.values[1]);
         }
@@ -239,10 +247,18 @@ $(document).ready(() => {
         });
     }
 
-    $('.js-room-card-toggle').on('click', (e)=>{
+    $('.js-room-card-toggle').on('click', (e) => {
         const $el = $(e.target);
         $(".js-slider-vertical").slick("refresh");
-        $el.closest('.js-room-card').find('.js-room-card-bottom').toggleClass('active');
+        $el.closest('.js-room-card').toggleClass('active').find('.js-room-card-bottom').toggleClass('active');
+    });
+
+    $(".js-modal").iziModal({
+        width: 1008
+    });
+
+    $('.js-select').select2({
+        width: "100%"
     });
 
 

@@ -52,6 +52,7 @@
 	},
 	"dependencies": {
 		"baron": "^3.0.3",
+		"izimodal": "^1.5.1",
 		"jquery": "^3.4.1",
 		"jquery-datepicker": "^1.12.3",
 		"jquery-ui": "^1.12.1",

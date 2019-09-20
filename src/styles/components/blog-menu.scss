@@ -1,5 +1,7 @@
 .blog-menu {
   display: flex;
+  margin-bottom: 80px;
+  margin-top: 40px;
 
   @include tablet {
     flex-direction: column;
@@ -31,4 +33,12 @@
       color: #fff;
     }
   }
+}
+
+.blog-title {
+  font-size: 48px;
+  line-height: 62px;
+  color: #1D3252;
+  text-align: center;
+  margin-top: 70px;
 }

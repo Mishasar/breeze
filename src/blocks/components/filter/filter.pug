@@ -57,13 +57,23 @@ mixin checkbox(text, id)
                         | От
                         input.filter__input-cost.js-cost-max(value=1000 type='number')
                 .filter__slider-range.js-slider-range-cost
+                    .ui-slider-handle.js-cost-min-handle
+                        span 1
+                    .ui-slider-handle.js-cost-max-handle
+                        span.right 1000
                 .filter__result-buttons
                     a.filter__reset-button(href="#")
                     a.filter__submit-button.btn(href="#") Применить
         .filter__item
             span.filter__item-title Бронь
             .filter__item-hidden
-                p asdasd
+                .main-finder__input-check
+                    input#cb2.tgl(type = "checkbox")
+                    label.tgl-btn(for = "cb2")
+                        span Моментально
+                .filter__result-buttons
+                    a.filter__reset-button(href="#")
+                    a.filter__submit-button.btn(href="#") Применить
         .filter__item
             span.filter__item-title Метки
             .filter__item-hidden

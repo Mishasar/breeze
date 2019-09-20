@@ -1,0 +1,16 @@
+extends ../views/layouts/default
+
+include ../blocks/modules/tags/tags
+
+block variables
+    - var title = "Поиск";
+
+    include ../data/main
+
+block content
+    .container(style="display: flex;")
+        a.btn(data-izimodal-open=".js-modal-big") Большая
+        a.btn(style="margin-left: 10px;" data-izimodal-open=".js-modal-little") Малая
+
+
+
