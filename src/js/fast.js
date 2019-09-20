@@ -261,5 +261,9 @@ $(document).ready(() => {
         width: "100%"
     });
 
+    setTimeout(() => {
+        $('.js-critical').addClass('critical_show');
+    }, 700);
+
 
 });
