@@ -249,8 +249,11 @@ $(document).ready(() => {
 
     $('.js-room-card-toggle').on('click', (e) => {
         const $el = $(e.target);
+        const $card = $el.closest('.js-room-card');
         $(".js-slider-vertical").slick("refresh");
-        $el.closest('.js-room-card').toggleClass('active').find('.js-room-card-bottom').toggleClass('active');
+        $card.toggleClass('active');
+        $card.find('.js-room-card-bottom').toggleClass('active');
+        $card.find('.js-room-card-toggle').toggleClass('room-card__title_active');
     });
 
     $(".js-modal").iziModal({

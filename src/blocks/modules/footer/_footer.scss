@@ -62,6 +62,9 @@
   }
 
   &__imglink {
+    display: flex;
+    align-items: center;
+
     & + & {
       margin-left: 15px;
     }

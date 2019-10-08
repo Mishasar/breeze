@@ -27,6 +27,9 @@ import plumber from "gulp-plumber";
 import debug from "gulp-debug";
 import clean from "gulp-clean";
 import yargs from "yargs";
+import critical from "critical";
+
+
 
 const webpackConfig = require("./webpack.config.js"),
 	argv = yargs.argv,
@@ -276,6 +279,8 @@ export const fonts = () => gulp.src(paths.fonts.src)
 		"title": "Fonts"
 	}));
 
+
+
 export const favs = () => gulp.src(paths.favicons.src)
 	.pipe(favicons({
 		icons: {
@@ -294,6 +299,7 @@ export const favs = () => gulp.src(paths.favicons.src)
 	.pipe(debug({
 		"title": "Favicons"
 	}));
+
 
 export const development = gulp.series(cleanFiles, smartGrid,
 	gulp.parallel(views, styles, scripts, svgsprites, images, fonts, favs),

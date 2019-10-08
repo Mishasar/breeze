@@ -188,10 +188,11 @@
       position: absolute;
       content: "";
       right: 0;
-      top: 7px;
+      top: 6px;
       width: 16px;
       height: 16px;
       background: url("../../img/array-bottom.svg") no-repeat center center;
+      transition: transform .5s ease;
     }
 
     &_active {

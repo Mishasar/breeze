@@ -85,3 +85,25 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Futura';
+    src: url('../fonts/FuturaPT-Bold.eot');
+    src: local('Futura PT Bold'), local('FuturaPT-Bold'),
+    url('../fonts/FuturaPT-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaPT-Bold.woff') format('woff'),
+    url('../fonts/FuturaPT-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('../fonts/FuturaPT-ExtraBold.eot');
+    src: local('Futura PT Extra Bold'), local('FuturaPT-ExtraBold'),
+    url('../fonts/FuturaPT-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaPT-ExtraBold.woff') format('woff'),
+    url('../fonts/FuturaPT-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
