@@ -228,7 +228,7 @@ h6,
 
 .btn {
   text-decoration: none;
-  background: #E26D5C;
+  background-color: #E26D5C;
   border-radius: 3px;
   font-size: 16px;
   line-height: 21px;
@@ -240,7 +240,7 @@ h6,
   transition: background-color .3s ease;
 
   &:hover {
-    background: #b45a4c;
+    background-color: #b45a4c;
   }
 }
 
@@ -375,4 +375,8 @@ h6,
   .slick-center + .slick-active + .slick-active {
     opacity: 1;
   }
+}
+
+.ui-datepicker-unselectable.ui-state-disabled {
+  padding: 3px 4px;
 }
